@@ -1,4 +1,44 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="GlowUp OS"><meta name="theme-color" content="#10151c"></head><body><noscript><div style="padding:24px;color:white;background:#8a2929;font:16px sans-serif">Для работы GlowUp OS нужен JavaScript. Открой приложение в Safari, а не в просмотрщике файлов.</div></noscript>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="GlowUp OS"><meta name="theme-color" content="#10151c">
+<style id="glow-v3-style">
+:root{--bg:#e9edf4!important;--surface:rgba(255,255,255,.62)!important;--ink:#101a2d!important;--muted:#67748a!important;--line:rgba(255,255,255,.68)!important;--pine:#1c3559!important;--on-pine:#fff!important;--accent:#5475ae!important;color-scheme:light!important}
+*{ -webkit-tap-highlight-color:transparent }
+html,body{background:linear-gradient(145deg,#e4eaf5 0%,#f5f6fa 43%,#dbe5f2 100%) fixed!important;color:#101a2d!important;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif!important}
+body:before{content:"";position:fixed;z-index:-1;inset:0;background:radial-gradient(ellipse at 4% 3%,#b6c9eea0,transparent 55%),radial-gradient(ellipse at 96% 73%,#c7d7f6a8,transparent 53%);pointer-events:none}
+.top{display:none!important}
+#view{padding-top:88px!important;padding-bottom:115px!important;max-width:680px!important;margin:auto!important}
+.tabs{display:none!important}
+#glow-extra-nav{display:none!important}
+#glow-extra{background:linear-gradient(145deg,#e7edf7,#f4f6fb 60%,#dce7f5)!important}
+#glow-extra .ex-card,.sec,.hero,.datebar,.card,.panel{background:rgba(255,255,255,.57)!important;border:1px solid rgba(255,255,255,.78)!important;box-shadow:0 9px 35px rgba(30,56,102,.075),inset 0 1px 0 #ffffffba!important;backdrop-filter:blur(22px) saturate(155%);-webkit-backdrop-filter:blur(22px) saturate(155%);border-radius:22px!important}
+#view button,#glow-extra button{border-radius:14px!important}
+#view .hero{padding:15px!important}
+#view .sec{margin:10px 0!important}
+#view h2{letter-spacing:-.025em!important}
+#glow-v3-top{position:fixed;z-index:90;top:0;left:0;right:0;padding:calc(env(safe-area-inset-top) + 10px) 20px 13px;background:rgba(238,243,250,.69);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border-bottom:1px solid #ffffffad;display:flex;align-items:center;justify-content:space-between}
+#glow-v3-top .eyebrow{font-size:10px;letter-spacing:.19em;color:#647895;font-weight:750}
+#glow-v3-top .wordmark{font-size:23px;letter-spacing:-.065em;font-weight:760;color:#152743}
+#glow-v3-top .wordmark em{font-style:normal;color:#7393c5}
+#glow-v3-top .smallpill{font-size:11px;font-weight:700;color:#405a80;padding:8px 11px;border-radius:99px;background:#ffffff91;border:1px solid #fff}
+#glow-v3-bottom{position:fixed;z-index:100;bottom:calc(env(safe-area-inset-bottom) + 10px);left:50%;transform:translateX(-50%);width:min(94%,430px);display:grid;grid-template-columns:repeat(4,1fr);gap:3px;background:rgba(249,251,255,.67);border:1px solid rgba(255,255,255,.92);box-shadow:0 12px 35px #1b345d2c,inset 0 1px 0 #fff;border-radius:27px;padding:6px;backdrop-filter:blur(35px) saturate(190%);-webkit-backdrop-filter:blur(35px) saturate(190%)}
+#glow-v3-bottom button{border:0;background:transparent;color:#74839a;border-radius:21px;padding:9px 1px 7px;font:600 10px -apple-system,BlinkMacSystemFont,sans-serif;display:flex;flex-direction:column;align-items:center;gap:3px;min-height:53px}
+#glow-v3-bottom button.active{background:rgba(255,255,255,.91);color:#1b365c;box-shadow:0 3px 14px #4c67972a}
+#glow-v3-bottom .glyph{font-size:21px;line-height:23px;font-weight:500}
+#glow-v3-menu{display:none;position:fixed;z-index:105;inset:0;background:rgba(24,39,66,.24);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:calc(env(safe-area-inset-top) + 80px) 18px 110px;overflow:auto}
+#glow-v3-menu.show{display:block}
+#glow-v3-menu .sheet{max-width:480px;margin:auto;background:rgba(249,251,255,.91);border:1px solid white;border-radius:30px;padding:18px;box-shadow:0 20px 70px #1a2d4d38}
+#glow-v3-menu h2{font-size:23px;margin:3px 0 15px;letter-spacing:-.05em}
+#glow-v3-menu .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+#glow-v3-menu button{background:rgba(225,233,246,.73);border:1px solid white;border-radius:19px;padding:18px 12px;text-align:left;color:#1b3154;font-size:14px;font-weight:700}
+#glow-v3-menu button span{display:block;font-size:23px;margin-bottom:8px}
+#glow-v3-menu .close{float:right;padding:8px 12px;border-radius:14px;font-size:12px}
+#glow-extra.active{padding-top:calc(95px + env(safe-area-inset-top))!important;padding-bottom:110px!important}
+#glow-extra .inner{max-width:600px}
+#glow-extra .task{padding:13px 0!important}
+#glow-extra input,#glow-extra textarea{font-size:16px!important}
+@media(prefers-color-scheme:dark){:root{color-scheme:light!important}}
+@media(min-width:700px){#view{padding-left:18px;padding-right:18px}}
+</style>
+</head><body><noscript><div style="padding:24px;color:white;background:#8a2929;font:16px sans-serif">Для работы GlowUp OS нужен JavaScript. Открой приложение в Safari, а не в просмотрщике файлов.</div></noscript>
 <title>Глоуап до НГ</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -845,5 +885,30 @@ function download(name,content,type){let blob=new Blob([content],{type}),url=URL
 function getReport(n){let db=window.glowStore.get(),days=Object.keys(db).filter(k=>k.startsWith('days/')).sort();let start=dateAdd(date,1-n),selected=days.filter(k=>k.slice(5)>=start&&k.slice(5)<=date);let tasks=data.tasks.filter(t=>t.date>=start&&t.date<=date);let lines=['GLOWUP OS — отчёт '+start+' — '+date,'Задачи ('+tasks.filter(t=>t.done).length+'/'+tasks.length+'):'];tasks.forEach(t=>lines.push((t.done?'[x] ':'[ ] ')+t.date+' · '+t.category+' · '+t.text));lines.push('\nЗаметки:');Object.keys(data.notes).sort().filter(d=>d>=start&&d<=date).forEach(d=>lines.push(d+': '+data.notes[d]));lines.push('\nДанные основного трекера:');selected.forEach(k=>lines.push(k.slice(5)+': '+JSON.stringify(db[k])));lines.push('\nПрогресс бизнес-плана: '+JSON.stringify(db['meta/biz']||{}));lines.push('\nПроанализируй выполнение и предложи изменения с учётом исходного плана. Если предлагаешь пакет задач, верни JSON вида {"tasks":[{"id":"...","date":"YYYY-MM-DD","category":"...","text":"...","due":"YYYY-MM-DD"}]}');return lines.join('\n')}
 return {open(m){mode=m;document.getElementById('glow-extra').classList.add('active');render()},close(){document.getElementById('glow-extra').classList.remove('active')},move(n){date=dateAdd(date,n);render()},today(){date=new Date().toLocaleDateString('en-CA');render()},setDate(v){date=v;render()},check(id,v){let t=data.tasks.find(t=>t.id===id);if(t){t.done=v;t.completedAt=v?new Date().toISOString():null;save();render()}},add(){let text=document.getElementById('newTask').value.trim();if(!text)return;data.tasks.push({id:'u'+Date.now(),date,category:document.getElementById('newCategory').value,text,done:false});save();render()},note(v){data.notes[date]=v;save()},edit(id){let t=data.tasks.find(t=>t.id===id);if(!t)return;let text=prompt('Изменить задачу',t.text);if(text===null)return;if(!text.trim()){if(confirm('Удалить задачу?'))data.tasks=data.tasks.filter(x=>x.id!==id)}else{t.text=text.trim();let newDate=prompt('Дата задачи ГГГГ-ММ-ДД',t.date);if(newDate&&/^\d{4}-\d{2}-\d{2}$/.test(newDate))t.date=newDate;}save();render()},async copyReport(n){let r=getReport(n);try{await navigator.clipboard.writeText(r);alert('Отчёт скопирован. Вставь его в наш чат ChatGPT.')}catch(e){prompt('Скопируй текст отчёта',r)}},importTasks(){try{let p=JSON.parse(document.getElementById('syncPaste').value),tasks=p.tasks;if(!Array.isArray(tasks)||tasks.length>200||tasks.some(t=>typeof t.text!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(t.date)||typeof t.category!=='string'))throw Error('Неверный формат задач');if(!confirm('Добавить/обновить '+tasks.length+' задач?'))return;for(let t of tasks){let existing=data.tasks.find(x=>x.id===t.id);if(existing)Object.assign(existing,{text:t.text,date:t.date,category:t.category,due:t.due||existing.due});else data.tasks.push({id:t.id||'imp'+Date.now()+Math.random().toString(36).slice(2),date:t.date,category:t.category,text:t.text,due:t.due||'',done:false})}save();alert('Задачи обновлены');mode='tasks';render()}catch(e){alert('Не удалось применить пакет: '+e.message)}},backup(){download('glowup-backup-'+date+'.json',JSON.stringify({format:'glowup-os-backup-v1',database:window.glowStore.get(),extra:data,exportedAt:new Date().toISOString()},null,2),'application/json')},async restore(file){if(!file)return;try{let b=JSON.parse(await file.text());if(b.format!=='glowup-os-backup-v1'||!b.database||!b.extra||!Array.isArray(b.extra.tasks))throw Error('Неподходящий файл');if(!confirm('Заменить ВСЕ текущие данные резервной копией?'))return;localStorage.setItem(KEY,JSON.stringify(b.extra));window.glowStore.replace(b.database)}catch(e){alert('Ошибка восстановления: '+e.message)}},calendar(){let ts=data.tasks.filter(t=>!t.done),fmt=x=>x.replaceAll('-',''),ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//GlowUp OS//RU'];ts.forEach(t=>{let d=fmt(t.date),end=fmt(dateAdd(t.date,1));ics.push('BEGIN:VEVENT','UID:'+t.id+'@glowup.local','DTSTART;VALUE=DATE:'+d,'DTEND;VALUE=DATE:'+end,'SUMMARY:'+t.text.replace(/[\\,;]/g,' '),'DESCRIPTION:'+t.category,'END:VEVENT')});ics.push('END:VCALENDAR');download('glowup-calendar.ics',ics.join('\r\n'),'text/calendar')}};
 })();
+</script>
+
+<div id="glow-v3-top"><div><div class="eyebrow">YOUR PERSONAL SYSTEM</div><div class="wordmark">glowup<span style="color:#7897c3">.</span>os</div></div><div class="smallpill" id="glow-v3-days">ДО НОВОГО ГОДА</div></div>
+<nav id="glow-v3-bottom" aria-label="Главная навигация">
+<button class="active" data-v3="today" onclick="GlowV3.go('today')"><span class="glyph">◈</span>Сегодня</button>
+<button data-v3="calendar" onclick="GlowV3.go('calendar')"><span class="glyph">▦</span>План</button>
+<button data-v3="projects" onclick="GlowV3.go('projects')"><span class="glyph">◎</span>Проекты</button>
+<button data-v3="me" onclick="GlowV3.go('me')"><span class="glyph">◉</span>Моё</button>
+</nav>
+<div id="glow-v3-menu"><div class="sheet"><button class="close" onclick="GlowV3.closeMenu()">Закрыть ✕</button><h2>Моё пространство</h2><div class="menu-grid">
+<button onclick="GlowV3.section('food')"><span>◫</span>Питание</button>
+<button onclick="GlowV3.section('gym')"><span>⌁</span>Тренировки</button>
+<button onclick="GlowV3.section('progress')"><span>◷</span>Прогресс</button>
+<button onclick="GlowV3.section('plan')"><span>▤</span>Расписание</button>
+<button onclick="GlowV3.extra('tasks')"><span>✓</span>Задачи и заметки</button>
+<button onclick="GlowV3.extra('sync')"><span>⇄</span>ChatGPT и копии</button>
+</div><p style="font-size:12px;color:#73849c;margin:16px 3px 0">Все прежние данные и функции сохранены.</p></div></div>
+<script>
+window.GlowV3={
+ go(k){document.getElementById('glow-v3-menu').classList.remove('show');if(window.GlowExtra)GlowExtra.close();document.querySelectorAll('#glow-v3-bottom button').forEach(b=>b.classList.toggle('active',b.dataset.v3===k));if(k==='me'){document.getElementById('glow-v3-menu').classList.add('show');return}if(k==='calendar'){GlowExtra.open('tasks');return}this.section(k==='projects'?'biz':'today')},
+ section(k){document.getElementById('glow-v3-menu').classList.remove('show');if(window.GlowExtra)GlowExtra.close();const b=document.querySelector('.tabs button[data-tab="'+k+'"]');if(b)b.click();window.scrollTo(0,0)},
+ extra(k){document.getElementById('glow-v3-menu').classList.remove('show');GlowExtra.open(k)},
+ closeMenu(){document.getElementById('glow-v3-menu').classList.remove('show');document.querySelector('#glow-v3-bottom button[data-v3="today"]').click()}
+};
+(function(){const d=new Date(),n=Math.max(0,Math.ceil((new Date(2027,0,1)-new Date(d.getFullYear(),d.getMonth(),d.getDate()))/86400000));document.getElementById('glow-v3-days').textContent=n+' ДНЕЙ ДО НГ';})();
 </script>
 </body></html>
